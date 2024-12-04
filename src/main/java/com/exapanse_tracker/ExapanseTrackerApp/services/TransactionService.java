@@ -15,14 +15,17 @@ public class TransactionService {
     private TransactionRepository transactionRepository;
 
     public void createTransaction(CreateTransactionRequestDTO transactionRequest) {
-//        Transaction transaction = new Transaction();
+        Transaction transaction = new Transaction();
 
-//        transaction.setUserId(transactionRequest.userId());
-//        transaction.setType(transactionRequest.type());
-//        transaction.setAmount(transactionRequest.amount());
-//        transaction.setCurrency("BRL");
-//
-//        this.transactionRepository.save(transaction);
+        transaction.setUserId(transactionRequest.userId());
+        transaction.setTitle(transactionRequest.title());
+        transaction.setDescription(transactionRequest.description());
+        transaction.setType(transactionRequest.type());
+        transaction.setAmount(transactionRequest.amount());
+        transaction.setCurrency("BRL");
+        transaction.setIconId(transactionRequest.iconId());
+
+        this.transactionRepository.save(transaction);
     }
 
     public List<Transaction> listAllTransactions() {
