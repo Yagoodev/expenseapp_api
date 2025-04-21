@@ -6,16 +6,11 @@ import java.time.LocalDateTime;
 public record ListTransactionsResponseDTO(
         Long id,
         LocalDateTime date,
-        String institution,
-        String account,
-        String merchant,
+        String title,
+        String description,
         BigDecimal amount,
         String type,
         int categoryId,
-        String category,
-        Boolean isPending,
-        Boolean isTransfer,
-        Boolean isExpense,
-        Boolean isEdited
+        String category
 ) {
 }

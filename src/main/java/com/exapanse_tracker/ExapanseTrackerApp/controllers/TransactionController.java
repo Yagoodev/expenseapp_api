@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/transactions")
 public class TransactionController {
 
@@ -38,17 +39,12 @@ public class TransactionController {
         List<ListTransactionsResponseDTO> transactionListParsed = transactionList.stream().map(transaction -> new ListTransactionsResponseDTO(
                         transaction.getTransactionId(),
                         transaction.getCreatedAt(),
-                        "",
-                        "",
-                        "",
+                        transaction.getTitle(),
+                        transaction.getDescription(),
                         transaction.getAmount(),
                         transaction.getType(),
                         1,
-                        "",
-                        false,
-                        false,
-                        false,
-                        false
+                        ""
                 ))
                 .toList();
 
