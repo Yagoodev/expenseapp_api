@@ -1,6 +1,5 @@
-package com.exapanse_tracker.ExapanseTrackerApp.domain.transaction;
+package com.exapanse_tracker.ExapanseTrackerApp.domain;
 
-import com.exapanse_tracker.ExapanseTrackerApp.domain.user.Users;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "transactions")
+@Table(name = "tb_transactions")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -25,7 +24,9 @@ public class Transaction {
 
     private LocalDateTime updatedAt;
 
-    private UUID userId;
+    @ManyToMany
+    @JoinColumn(name = "userId")
+    private Users users;
 
     private String title;
 
@@ -40,5 +41,7 @@ public class Transaction {
     @Column(length = 3, nullable = false)
     private String currency;
 
-    private Long iconId;
+    @ManyToMany
+    @JoinColumn(name = "transactionIconId")
+    private TransactionIcon transactionIcon;
 }

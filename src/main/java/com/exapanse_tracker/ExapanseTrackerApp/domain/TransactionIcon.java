@@ -1,4 +1,4 @@
-package com.exapanse_tracker.ExapanseTrackerApp.domain.transaction;
+package com.exapanse_tracker.ExapanseTrackerApp.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "transactions_icon")
+@Table(name = "tb_transactions_icon")
 @Getter
 @Setter
 @AllArgsConstructor

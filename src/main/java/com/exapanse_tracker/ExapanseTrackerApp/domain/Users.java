@@ -1,4 +1,4 @@
-package com.exapanse_tracker.ExapanseTrackerApp.domain.user;
+package com.exapanse_tracker.ExapanseTrackerApp.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "tb_users")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,4 +27,8 @@ public class Users {
     private LocalDateTime updatedAt;
 
     private String username;
+
+    private String email;
+
+    private Double salary;
 }

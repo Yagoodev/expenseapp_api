@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  db:
+  finance_db:
     image: postgres:15
     container_name: finance_db
     environment:
@@ -10,3 +10,8 @@ services:
       POSTGRES_DB: finance_db
     ports:
       - 5432:5432
+    volumes:
+      - db-expanse-tracker-app:/var/lib/postgresql/data
+
+volumes:
+  db-expanse-tracker-app:

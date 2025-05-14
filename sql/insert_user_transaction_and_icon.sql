@@ -1,8 +1,8 @@
--- INSERT INTO transactions_icon (name, path) VALUES 
--- ('dollar_sign', ''),
--- ('shopping_cart', ''),
--- ('exchange_alt', ''),
--- ('home', '');
+ INSERT INTO transactions_icon (name, path) VALUES
+ ('dollar_sign', ''),
+ ('shopping_cart', ''),
+ ('exchange_alt', ''),
+ ('home', '');
 
 -- INSERT INTO users (username) VALUES ('yagodev');
 
